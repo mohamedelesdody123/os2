@@ -27,4 +27,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/os2:latest
+          platforms: linux/amd64
+          tags: |
+            mohamedelesdody/os2:latest
+            mohamedelesdody/os2:${{ github.sha }}
